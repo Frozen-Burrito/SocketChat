@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebSocket App</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <link rel='stylesheet' href='/styles.css'>
+</head>
+<body>
+    <div id="chat">
+        <div id="chat-window">
+            <div id="output"></div>
+        </div>
+
+        <input id="handle" type="text" placeholder="Username" />
+        <input id="message" type="text" placeholder="What are you up to?" />
+
+        <button id="sendBtn">Send</button>
+    </div>
+
+    <script src="/chat.js"></script>
+</body>
+</html>
