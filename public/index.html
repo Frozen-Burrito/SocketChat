@@ -6,20 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebSocket App</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
 
     <link rel='stylesheet' href='/styles.css'>
 </head>
 <body>
-    <div id="chat">
-        <div id="chat-window">
-            <div id="output"></div>
+    <div>
+        <div id="userLogin" class="container small">
+            <h2>Start Chatting!</h2>
+            <form id="userForm">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input class="form-control" id="username">
+                    <br />
+                    <input type="submit" value="Login"></input>
+                </div>
+            </form>
         </div>
 
-        <input id="handle" type="text" placeholder="Username" />
-        <input id="message" type="text" placeholder="What are you up to?" />
+        <div id="messages" class="container">
+            <div class="users-list">
+                <h3>Users Online</h3>
 
-        <button id="sendBtn">Send</button>
+                <ul id="users" class="list-group">
+                    <li class="user">Someone</li>
+                </ul>
+            </div>
+
+            <div class="chats">
+                <div class="chat-window" id="chat"></div>
+
+                <form id="messageForm">
+                    <input type="text" class="messageInput" id="message" placeholder="Your message"/>
+                    <input type="submit" class="btn" value="Send"></input>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="/chat.js"></script>
