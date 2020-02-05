@@ -34,6 +34,11 @@ io.on('connection', function (socket) {
         io.sockets.emit('new message', { msg: data, user: socket.username});
     });
 
+    // User typing
+    socket.on('typing', function(data) {
+        socket.emit('typing', data);
+    });
+
     // New user
     socket.on('new user', function (data, callback) {
         callback(true);
